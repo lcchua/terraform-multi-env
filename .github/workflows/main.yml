@@ -12,7 +12,7 @@ on:
         - prod
 
 jobs:
-  build ${{ github.event.inputs.choice }}:
+  terraform-plan:
     runs-on: ubuntu-latest
 
     steps:
