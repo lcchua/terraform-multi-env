@@ -44,10 +44,10 @@ jobs:
           terraform workspace list
 
       - name: Terraform plan
-        run: terraform plan
+        run: terraform plan -var-file=${{ github.event.inputs.choice }}.tfvars
 
       - name: Terraform apply
-        run: terraform apply -auto-approve
+        run: terraform apply -var-file=${{ github.event.inputs.choice }}.tfvars -auto-approve
 
       - name: Pause 3min to verify bucket creation
         run: sleep 180
