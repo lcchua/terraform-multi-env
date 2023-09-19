@@ -1,4 +1,4 @@
-name: CI
+name: Terraform Plan
 
 on:
   workflow_dispatch:
@@ -37,3 +37,12 @@ jobs:
 
       - name: Terraform workspace list
         run: terraform workspace list
+
+      - name: Terraform workspace new environment and select
+        run: |
+          terraform workspace new ${{ github.event.inputs.choice }}
+          terraform workspace select ${{ github.event.inputs.choice }}
+          terraform workspace list
+
+      - name: Terraform plan
+        run: terraform plan
