@@ -8,10 +8,11 @@ terraform {
 }
 
 # Configure the AWS Provider
+# Uncomment the region, access_key and secret_key if you are running locally
 provider "aws" {
-  region = "us-east-1"
-  access_key = "xxxxx" # Update accordingly
-  secret_key = "xxxxx" # Update accordingly
+  # region = "us-east-1"
+  # access_key = "xxxxx" # Update accordingly
+  # secret_key = "xxxxx" # Update accordingly
 }
 
 resource "aws_s3_bucket" "example" {
