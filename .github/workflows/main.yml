@@ -12,7 +12,7 @@ on:
         - prod
 
 jobs:
-  terraform-plan:
+  terraform-create-and-destroy:
     runs-on: ubuntu-latest
 
     steps:
@@ -53,4 +53,4 @@ jobs:
         run: sleep 180
 
       - name: Terraform destroy
-        run: terraform destroy -auto-approve
+        run: terraform destroy -var-file=${{ github.event.inputs.choice }}.tfvars -auto-approve
