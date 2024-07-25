@@ -2,8 +2,8 @@
 
 terraform {
   backend "s3" {
-    bucket = "sctp-ce3-tfstate-bucket-1"
+    bucket = "sctp-ce6-tfstate"
     key    = "luqman-tf-workspace-act.tfstate"   #Change the value of this to yourname-tf-workspace-act.tfstate for  example
-    region = "us-east-1"
+    region = "ap-southeast-1"
   }
 }
