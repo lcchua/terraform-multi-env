@@ -9,7 +9,7 @@ on:
         options:
           - dev
           - uat
-          - prd
+          - prod
 
 jobs:
   terraform-create-and-destroy:
